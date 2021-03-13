@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import {
   withStyles,
   Hidden,
@@ -11,14 +11,16 @@ import {
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import MailIcon from '@material-ui/icons/Mail';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
+import {AppContext} from '../App/Provider';
 import styles from './SideDrawer.styles';
 
 const SideDrawer = ({classes, theme, container}) => {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  // const [mobileOpen, setMobileOpen] = useState(false);
+  const [state, setState] = useContext(AppContext);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
+  // const handleDrawerToggle = () => {
+  //   setMobileOpen(!mobileOpen);
+  // };
 
   const drawer = (
     <div>
@@ -52,8 +54,8 @@ const SideDrawer = ({classes, theme, container}) => {
           container={container}
           variant="temporary"
           anchor={theme.direction === 'rtl' ? 'right' : 'left'}
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
+          open={state.mobileOpen}
+          onClose={() => setState(currentState => ({ ...currentState, mobileOpen: !currentState.mobileOpen}))}
           classes={{
             paper: classes.drawerPaper,
           }}

@@ -1,8 +1,10 @@
+import React from 'react';
 import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import Layout from './HOC/Layout/Layout.component';
 import Loans from './Loans/Loans.component';
 import Loaned from './Loaned/Loaned.component';
 import Users from './Users/Users.component';
+import Provider from './App/Provider';
 
 function App() {
   const routes = (
@@ -16,11 +18,11 @@ function App() {
   );
 
   return (
-    <div>
+    <Provider>
       <Layout>
         {routes}
       </Layout>
-    </div>
+    </Provider>
   );
 }
 

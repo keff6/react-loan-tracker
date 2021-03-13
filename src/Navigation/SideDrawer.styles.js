@@ -15,6 +15,9 @@ const styles = theme => ({
     color: colors.White,
     backgroundColor: colors.DarkSlateGray,
   },
+  buttonLink: {
+    color: colors.White,
+  },
 });
 
 export default styles;

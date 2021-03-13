@@ -3,15 +3,6 @@ import { colors } from 'utils';
 const drawerWidth = 240;
 
 const styles = theme => ({
-  root: {
-    display: 'flex',
-  },
-  drawer: {
-    [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
-  },
   appBar: {
     marginLeft: drawerWidth,
     backgroundColor: colors.DarkSlateGray,
@@ -27,15 +18,6 @@ const styles = theme => ({
     },
   },
   toolbar: theme.mixins.toolbar,
-  drawerPaper: {
-    width: drawerWidth,
-    color: colors.White,
-    backgroundColor: colors.DarkSlateGray,
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing.unit * 3,
-  },
 });
 
 export default styles;

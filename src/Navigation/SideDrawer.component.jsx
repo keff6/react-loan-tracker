@@ -14,6 +14,7 @@ import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import PeopleIcon from '@material-ui/icons/People';
 import InfoIcon from '@material-ui/icons/Info';
 import {AppContext} from '../App/Provider';
+import history from '../App/history';
 import styles from './SideDrawer.styles';
 
 const SideDrawer = ({classes, theme, container}) => {
@@ -23,24 +24,24 @@ const SideDrawer = ({classes, theme, container}) => {
     {
       name: 'Loans',
       icon: <LocalAtmIcon />,
-      path: null
+      path: '/loans'
     },
     {
       name: 'Loaned',
       icon: <AccountBalanceIcon />,
-      path: null
+      path: '/loaned'
     },
     {
       name: 'Users',
       icon: <PeopleIcon />,
-      path: null
+      path: '/users'
     },
     {
       name: 'About',
       icon: <InfoIcon />,
-      path: null
+      path: '/about'
     },
-  ]
+  ];
 
   const drawer = (
     <div>
@@ -48,7 +49,7 @@ const SideDrawer = ({classes, theme, container}) => {
       <Divider />
       <List>
         {buttons.map((btn, index) => (
-          <ListItem button key={btn.name}>
+          <ListItem button key={btn.name} onClick={() => history.push(btn.path)}>
             <ListItemIcon className={classes.buttonLink}>{btn.icon}</ListItemIcon>
             <ListItemText primary={btn.name} />
           </ListItem>
@@ -66,7 +67,7 @@ const SideDrawer = ({classes, theme, container}) => {
           variant="temporary"
           anchor={theme.direction === 'rtl' ? 'right' : 'left'}
           open={state.mobileOpen}
-          onClose={() => setState(currentState => ({ ...currentState, mobileOpen: !currentState.mobileOpen}))}
+          onClick={() => setState(currentState => ({ ...currentState, mobileOpen: !currentState.mobileOpen}))}
           classes={{
             paper: classes.drawerPaper,
           }}

@@ -1,5 +1,11 @@
 import React from 'react';
+import Header from '../Header/Header.component';
 
-const Loaned = () => <h1>Loaned</h1>
+const Loaned = () => (
+  <>
+    <Header title="My Money Loaned" />
+    <h1 key='LOANS'>Loaned</h1>
+  </>
+)
 
 export default Loaned;

@@ -1,10 +1,10 @@
 import { colors } from 'utils';
 
-const drawerWidth = 240;
+const drawerWidth = 210;
 
 const styles = theme => ({
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       width: drawerWidth,
       flexShrink: 0,
     },

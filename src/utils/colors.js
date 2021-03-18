@@ -8,7 +8,8 @@ const colors = {
   Zomp: '#43AA8B',
   Sage: '#B2B09B',
   AshGray: '#B9B7A4',
-  White: '#FFF'
+  White: '#FFF',
+  Tasman: '#d2dfd3',
 }
 
 export default colors;

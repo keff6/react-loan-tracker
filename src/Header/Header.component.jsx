@@ -4,7 +4,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {AppContext} from '../App/Provider';
 import styles from './Header.styles';
 
-const Header = ({ classes, handleDrawerToggle }) => {
+const Header = ({ classes, title }) => {
   const [, setState] = useContext(AppContext);
 
   return (
@@ -18,8 +18,8 @@ const Header = ({ classes, handleDrawerToggle }) => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" color="inherit" noWrap>
-          Responsive drawer
+        <Typography variant="h6" color="inherit" noWrap className={classes.title}>
+          {title}
         </Typography>
       </Toolbar>
     </AppBar>

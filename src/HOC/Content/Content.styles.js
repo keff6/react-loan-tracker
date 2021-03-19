@@ -1,14 +1,17 @@
+import { colors } from "utils";
+
 const styles = theme => ({
   content: {
     flexGrow: 1,
+    backgroundColor: colors.AshGray,
   },
   mainContainer: {
-    maxWidth: '900px',
-    margin: '0 auto',
+    maxWidth: '935px',
+    margin: '64px auto 0',
     padding: '60px',
     [theme.breakpoints.down('sm')]: {
       maxWidth: '100%',
-      padding: '40px 16px',
+      padding: '20px 16px',
     },
   },
 });

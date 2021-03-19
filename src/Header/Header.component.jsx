@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import {AppBar, Toolbar, IconButton, Typography, withStyles} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import {AppContext} from '../App/Provider';
+import {AppContext} from '../Config/Provider';
 import styles from './Header.styles';
 
 const Header = ({ classes, title }) => {

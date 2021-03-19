@@ -10,6 +10,8 @@ const colors = {
   AshGray: '#B9B7A4',
   White: '#FFF',
   Tasman: '#d2dfd3',
+  Cultured: '#F2F7F8',
+  Emerald: '#408C69',
 }
 
 export default colors;

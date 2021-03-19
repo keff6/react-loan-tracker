@@ -3,7 +3,7 @@ import { colors } from "utils";
 const styles = theme => ({
   content: {
     flexGrow: 1,
-    backgroundColor: colors.AshGray,
+    backgroundColor: colors.Cultured,
   },
   mainContainer: {
     maxWidth: '935px',

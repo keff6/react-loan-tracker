@@ -1,5 +1,6 @@
 export const loans = [
   {
+    id: '123',
     loaner: 'Kevin Fallas', // should be related to user table in the future
     debtor: 'Jose Chinchilla', // should be related to user table in the future
     contractDate: '01/01/2021',

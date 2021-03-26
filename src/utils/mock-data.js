@@ -8,6 +8,7 @@ export const loans = [
     totalLoan: 100000,
     totalPaid: 40000,
     periodicity: null,
+    interestRate: 0,
     payments: [
       {
         date: '02/02/2021',

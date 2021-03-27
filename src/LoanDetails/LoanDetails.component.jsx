@@ -3,6 +3,7 @@ import { withStyles, Button, Divider } from '@material-ui/core';
 import Header from '../Header/Header.component'
 import { loans } from 'utils';
 import history from '../Config/history';
+import ReportPaymentForm from '../Common/ReportPaymentForm/ReportPaymentForm.component';
 import styles from './LoanDetails.styles';
 
 /*
@@ -33,7 +34,7 @@ const LoanDetails = ({classes}) => {
       <Header title="My Loans / Loan Details"/>
       <div className={classes.actionsContainer}>
         <Button color="primary" onClick={() => history.goBack()}>Back</Button>
-        <Button onClick={() => console.log('report payment')}>Report Payment</Button>        
+        <ReportPaymentForm />       
       </div>
       <div className={classes.container}>
         <p><span className={classes.label}>Loaner:</span>{loan.loaner}</p>

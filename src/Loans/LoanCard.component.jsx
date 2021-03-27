@@ -4,6 +4,7 @@ import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import history from '../Config/history';
+import ReportPaymentForm from '../Common/ReportPaymentForm/ReportPaymentForm.component';
 import styles from './LoanCard.styles';
 
 const LoanCard = ({ classes, openReportPayments }) => (
@@ -25,7 +26,7 @@ const LoanCard = ({ classes, openReportPayments }) => (
       </p>
     </CardContent>
     <CardActions className={classes.buttonsContainer}>
-      <Button onClick={openReportPayments}>Report Payment</Button>
+      <ReportPaymentForm />
       <Button color="primary" onClick={() => history.push('/loans/154')}>View Details</Button>
     </CardActions>
   </Card>

@@ -2,8 +2,12 @@ import { colors } from 'utils';
 
 const styles = theme => ({
   container: {
-    backgroundColor: colors.Emerald,
-    color: colors.White,
+    border: '1px solid black',
+    padding: '16px',
+  },
+  actionsContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
   },
 });
 

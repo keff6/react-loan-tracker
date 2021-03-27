@@ -15,6 +15,9 @@ const styles = theme => ({
     '& span': {
       marginLeft: '16px',
     },
+  },
+  buttonsContainer: {
+    justifyContent: 'flex-end',
   }
 });
 

@@ -2,7 +2,6 @@ import React from 'react';
 import proptypes from 'prop-types';
 import {
   Button,
-  TextField,
   Dialog,
   DialogActions,
   DialogContent,
@@ -20,6 +19,7 @@ const FormDialog = ({
   onSubmit,
   classes,
   contentText,
+  children
 }) => {
   const handleClose = () => {
     onClose();
@@ -36,14 +36,7 @@ const FormDialog = ({
         <DialogContentText>
           {contentText}
         </DialogContentText>
-        <TextField
-          autoFocus
-          margin="dense"
-          id="name"
-          label="Email Address"
-          type="email"
-          fullWidth
-        />
+        {children}
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose} color="primary">

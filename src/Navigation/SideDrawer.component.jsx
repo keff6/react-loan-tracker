@@ -39,7 +39,7 @@ const SideDrawer = ({classes, theme, container}) => {
     {
       name: 'About',
       icon: <InfoIcon />,
-      path: '/about'
+      path: '/users'
     },
   ];
 

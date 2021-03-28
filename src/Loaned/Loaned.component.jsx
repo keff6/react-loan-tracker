@@ -1,10 +1,12 @@
 import React from 'react';
+import { loans } from 'utils';
 import Header from '../Header/Header.component';
+import LoanList from '../LoanList/LoanList.component';
 
-const Loaned = () => (
+const Loaned = ({ props }) => (
   <>
-    <Header title="My Money Loaned" />
-    <h1 key='LOANS'>Loaned</h1>
+    <Header title="My Money Loaned"/>
+    <LoanList type="loaner" loansData={loans}/>
   </>
 )
 

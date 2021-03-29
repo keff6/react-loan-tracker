@@ -13,11 +13,30 @@ export const loans = [
       {
         date: '02/02/2021',
         amount: 5000,
+        status: 'approved'
       },
       {
         date: '02/02/2021',
         amount: 5000,
+        status: 'inTransit'
       }
     ]
+  }
+]
+
+export const users = [
+  {
+    id: '1',
+    name: 'Kevin',
+    lastName: 'Fallas',
+    email: 'kev.fallas@gmail.com',
+    userType: 'admin',
+  },
+  {
+    id: '2',
+    name: 'Jose',
+    lastName: 'Chinchilla',
+    email: 'beto@gmail.com',
+    userType: 'loanee',
   }
 ]

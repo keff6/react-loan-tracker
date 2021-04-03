@@ -5,6 +5,7 @@ import Header from '../Header/Header.component';
 import UserCard from './UserCard/UserCard.component';
 import FormDialog from '../Common/FormDialog/FormDialog.component';
 import InputText from '../Common/InputText/InputText.component';
+import DropDown from '../Common/DropDown/DropDown.component';
 import styles from './Users.styles'
 
 const Users = ({classes}) => {
@@ -26,6 +27,16 @@ const Users = ({classes}) => {
           <InputText label="Name" type="text"/>
           <InputText label="Last Name" type="text"/>
           <InputText label="EMail" type="email"/>
+          <DropDown
+            label="User Type"
+            value=""
+            options={[
+              {text:'Admin', value: 'admin'},
+              {text:'Loaner', value: 'loaner'},
+              {text:'Loanee', value: 'Loanee'},
+            ]}
+            onChange={(val) => console.warn(val)}
+          />
         </form>
       </FormDialog>
     </>

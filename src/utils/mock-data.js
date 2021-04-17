@@ -9,6 +9,7 @@ export const loans = [
     totalPaid: 40000,
     periodicity: null,
     interestRate: 0,
+    status: 'ongoing',  // pending / archived
     payments: [
       {
         date: '02/02/2021',

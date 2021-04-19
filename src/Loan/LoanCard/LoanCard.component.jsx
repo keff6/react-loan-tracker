@@ -1,10 +1,11 @@
 import React from 'react';
+import proptypes from 'prop-types';
 import { Card, CardHeader, CardContent, CardActions, Button, withStyles } from '@material-ui/core';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
-import history from '../Config/history';
-import ReportPaymentForm from '../Common/ReportPaymentForm/ReportPaymentForm.component';
+import history from 'Config/history';
+import { ReportPaymentForm } from 'Common';
 import styles from './LoanCard.styles';
 
 const LoanCard = ({ classes, type, loan }) => {
@@ -36,6 +37,12 @@ const LoanCard = ({ classes, type, loan }) => {
       </CardActions>
     </Card>
   )
+}
+
+LoanCard.propTypes = {
+  classes: proptypes.object.isRequired,
+  loan: proptypes.object,
+  type: proptypes.string,
 }
 
 export default withStyles(styles)(LoanCard);

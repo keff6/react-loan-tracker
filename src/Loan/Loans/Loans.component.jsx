@@ -1,7 +1,7 @@
 import React from 'react';
 import { loans } from 'utils';
-import Header from '../Header/Header.component';
-import LoanList from '../LoanList/LoanList.component';
+import Header from 'Header/Header.component';
+import {LoanList} from 'Loan';
 
 const Loans = ({ props }) => (
   <>

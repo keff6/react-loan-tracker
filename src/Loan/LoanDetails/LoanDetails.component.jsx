@@ -1,31 +1,11 @@
 import React from 'react';
+import proptypes from 'prop-types';
 import { withStyles, Button, Divider } from '@material-ui/core';
-import Header from '../Header/Header.component'
+import Header from '../../Header/Header.component'
 import { loans } from 'utils';
-import history from '../Config/history';
-import ReportPaymentForm from '../Common/ReportPaymentForm/ReportPaymentForm.component';
+import history from 'Config/history';
+import { ReportPaymentForm } from 'Common';
 import styles from './LoanDetails.styles';
-
-/*
-    loaner: 'Kevin Fallas', // should be related to user table in the future
-    debtor: 'Jose Chinchilla', // should be related to user table in the future
-    contractDate: '01/01/2021',
-    currency: 'colones',
-    totalLoan: 100000,
-    totalPaid: 40000,
-    periodicity: null,
-    payments: [
-      {
-        date: '02/02/2021',
-        amount: 5000,
-      },
-      {
-        date: '02/02/2021',
-        amount: 5000,
-      }
-    ]
-  }
-*/
 
 const LoanDetails = ({classes}) => {
   const loan = loans[0];
@@ -54,6 +34,10 @@ const LoanDetails = ({classes}) => {
       </div>
     </>
   )
+}
+
+LoanDetails.propTypes = {
+  classes: proptypes.object.isRequired,
 }
 
 export default withStyles(styles)(LoanDetails);

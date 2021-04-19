@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { loans } from 'utils';
 import { Button } from '@material-ui/core';
-import FormDialog from '../Common/FormDialog/FormDialog.component';
-import InputText from '../Common/InputText/InputText.component';
-import DropDown from '../Common/DropDown/DropDown.component';
-import Header from '../Header/Header.component';
-import LoanList from '../LoanList/LoanList.component';
+import { FormDialog, InputText, DropDown } from 'Common';
+import { LoanList } from 'Loan';
+import Header from 'Header/Header.component';
+
 
 const Loaned = ({ props }) => {
   const [isLoanFormOpen, setLoanFormOpen] = useState(false);

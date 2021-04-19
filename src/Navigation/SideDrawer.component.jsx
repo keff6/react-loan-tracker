@@ -13,8 +13,8 @@ import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 import PeopleIcon from '@material-ui/icons/People';
 import InfoIcon from '@material-ui/icons/Info';
-import {AppContext} from '../Config/Provider';
-import history from '../Config/history';
+import {AppContext} from 'Config/Provider';
+import history from 'Config/history';
 import styles from './SideDrawer.styles';
 
 const SideDrawer = ({classes, theme, container}) => {

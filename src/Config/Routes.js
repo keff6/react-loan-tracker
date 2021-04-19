@@ -1,9 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Loans from '../Loans/Loans.component';
-import Loaned from '../Loaned/Loaned.component';
-import LoanDetails from '../LoanDetails/LoanDetails.component';
-import Users from '../Users/Users.component';
+import {Loans, Loaned, LoanDetails} from 'Loan';
+import Users from '../User/Users.component';
 
 const Routes = () => {
   const routes = (

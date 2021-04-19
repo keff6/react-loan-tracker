@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
+import proptypes from 'prop-types';
 import { withStyles, Button } from '@material-ui/core';
-import {AppContext} from '../../Config/Provider';
-import FormDialog from '../FormDialog/FormDialog.component';
-import DatePicker from '../DatePicker/DatePicker.component';
-import InputText from '../InputText/InputText.component';
+import { AppContext } from 'Config/Provider';
+import { FormDialog, DatePicker, InputText } from 'Common';
 import styles from './ReportPaymentForm.styles';
 
-const ReportPaymentForm = () => {
+const ReportPaymentForm = ({classes}) => {
   const [state, setState] = useContext(AppContext);
 
   const openReportPayments = () => {
@@ -32,6 +31,10 @@ const ReportPaymentForm = () => {
       </FormDialog>
     </>
   )
+}
+
+ReportPaymentForm.propTypes = {
+  classes: proptypes.object.isRequired,
 }
 
 export default withStyles(styles)(ReportPaymentForm);

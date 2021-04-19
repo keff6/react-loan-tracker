@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import proptypes from 'prop-types';
 import { withStyles } from '@material-ui/core';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import styles from './DatePicker.styles';
 
-const DatePicker = ({classes, label}) => {
+const DatePicker = ({
+  classes,
+  label,
+  id
+}) => {
   const [selectedDate, setSelectedDate] = useState(new Date('2014-08-18T21:11:54'));
 
   const handleDateChange = (date) => {
@@ -17,18 +22,22 @@ const DatePicker = ({classes, label}) => {
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <KeyboardDatePicker
           fullWidth
-          id="date-picker-dialog"
-          format="MM/dd/yyyy"
-          value={selectedDate}
           inputVariant="outlined"
+          format="MM/dd/yyyy"
+          KeyboardButtonProps={{ 'aria-label': 'change date' }}
+          id={id}
+          value={selectedDate}
           onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
         />
       </MuiPickersUtilsProvider>
     </div>
   )
+}
+
+DatePicker.propTypes = {
+  classes: proptypes.object.isRequired,
+  id: proptypes.string,
+  label: proptypes.string, 
 }
 
 export default withStyles(styles)(DatePicker);

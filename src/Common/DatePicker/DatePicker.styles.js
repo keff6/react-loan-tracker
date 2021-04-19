@@ -1,5 +1,3 @@
-import { colors } from 'utils';
-
 const styles = theme => ({
   inputCountainer: {
     display: 'block',

@@ -46,7 +46,7 @@ const FormDialog = ({
           Cancel
         </Button>
         <Button onClick={handleClose} color="primary">
-          Subscribe
+          Submit
         </Button>
       </DialogActions>
     </Dialog>
@@ -54,11 +54,14 @@ const FormDialog = ({
 }
 
 FormDialog.propTypes = {
+  children: proptypes.node,
   classes: proptypes.object.isRequired,
   contentText: proptypes.string,
   formTitle: proptypes.string,
+  isOpen: proptypes.bool,
+  maxWidth: proptypes.string,
   onClose: proptypes.func.isRequired,  
-  onSubmit: proptypes.func,  
+  onSubmit: proptypes.func,
 }
 
 export default withStyles(styles)(FormDialog);

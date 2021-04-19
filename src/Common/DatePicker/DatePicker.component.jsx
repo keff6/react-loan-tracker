@@ -16,6 +16,7 @@ const DatePicker = ({classes, label}) => {
       {label && <span className={classes.label}>{label}</span>}
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
         <KeyboardDatePicker
+          fullWidth
           id="date-picker-dialog"
           format="MM/dd/yyyy"
           value={selectedDate}

@@ -19,7 +19,8 @@ const FormDialog = ({
   onSubmit,
   classes,
   contentText,
-  children
+  children,
+  maxWidth = 'sm',
 }) => {
   const handleClose = () => {
     onClose();
@@ -30,6 +31,8 @@ const FormDialog = ({
       open={isOpen}
       onClose={onClose}
       aria-labelledby="form-dialog-title"
+      maxWidth={maxWidth}
+      fullWidth
     >
       <DialogTitle id="form-dialog-title">{formTitle || 'Form'}</DialogTitle>
       <DialogContent>

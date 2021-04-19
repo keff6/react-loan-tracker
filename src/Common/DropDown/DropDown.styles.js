@@ -4,7 +4,6 @@ const styles = theme => ({
   inputCountainer: {
     display: 'block',
     marginBottom: '16px',
-    height: '40px',
     '&  input': {
       width: 'auto',
     },

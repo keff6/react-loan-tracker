@@ -21,6 +21,7 @@ const ReportPaymentForm = () => {
         isOpen={state.isReportPaymentOpen}
         onClose={() => setState(currentState => ({ ...currentState, isReportPaymentOpen: false}))}
         formTitle="Report Payment"
+        maxWidth="xs"
       >
         <form>
           <DatePicker

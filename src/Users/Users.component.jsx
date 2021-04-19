@@ -29,7 +29,7 @@ const Users = ({classes}) => {
           <InputText label="EMail" type="email"/>
           <DropDown
             label="User Type"
-            value=""
+            value="admin"
             options={[
               {text:'Admin', value: 'admin'},
               {text:'Loaner', value: 'loaner'},
